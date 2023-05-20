@@ -13,6 +13,7 @@ contract Swap {
 
     event Withdraw(address indexed from, address indexed to, uint256 value);
     event Deposit(address indexed from, address indexed to, uint256 value);
+    event changeAdmin(address indexed oldAdmin, address indexed newAdmin);
 
     constructor() {
         owner = msg.sender;
@@ -29,6 +30,7 @@ contract Swap {
     }
 
     function approveAdmin(address _add) public onlyOwner {
+        emit changeAdmin(admin, _add);
         admin = _add;
     }
     
