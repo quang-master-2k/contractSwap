@@ -1,7 +1,6 @@
 withdraw
 - token_address
-- list_wallet_address: ["address_wallet_1", "address_wallet_2", "address_wallet_3"]
-- list_value: [value_1, vaue_2, value_3]
+- array with multiple list: [["address_1", "value_1"],["address_2", "vakue_2"]]
 
 deposit
 interface function approve() before use deposit()
